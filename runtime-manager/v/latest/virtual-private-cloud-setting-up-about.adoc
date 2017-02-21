@@ -1,0 +1,35 @@
+= About Setting Up a VPC For Your Account
+
+== Configuring a VPC for Your Account
+
+In order to properly configure a VPC for your account, you need to keep the following considerations in mind.
+
+* Defining a proper size for your VPC is crucial. +
+More information can be found in the <<Size Your VPC, VPC size section below>>.
++
+[CAUTION]
+--
+When VPC is created or resized, you need to remove all your workers and redeploy them to your new VPC. +
+In order to avoid unnecessary downtime, you need to design your VPC to scale accordingly.
+--
++
+* In order for the VPC to be able to host your Workers, it needs to be bound to a business group and a specific CloudHub region. +
+More information about this can be found in the <<Deploying To Your VPC, deployment section below>>.
+* Make sure that the firewall rules are configured according to your needs. +
+Check the <<Firewall Rules,firewall rules section below>> for more information.
+
+Once this is defined, you can proceed to create your VPC using:
+
+. The link:/runtime-manager/vpc-create-using-runtime-manager-workflow[VPC UI] available in your Runtime Manager section.
+. The link:/anypoint-platform-for-apis/anypoint-platform-cli[Anypoint Platform CLI] (Look for the specific `vpc create` command).
+
+If you need to connect other private networks to your CloudHub VPC, follow the steps described in the <<VPC Connectivity Methods, connectivity methods section>>.
+
+== See Also
+
+* link:/runtime-manager/virtual-private-cloud-size-about[About VPC Sizing]
+* link:/runtime-manager/virtual-private-cloud-permissions-about[About VPC Permissions]
+* link:/runtime-manager/virtual-private-cloud-deployment-about[About VPC Deployment]
+* link:/runtime-manager/virtual-private-cloud-firewall-rules-about[About VPC Firewall Rules]
+* link:/runtime-manager/virtual-private-cloud-internal-dns-about[About VPC Internal DNS Server]
+* link:/runtime-manager/virtual-private-cloud-connectivity-methods-about[About VPC Connectivity Methods]

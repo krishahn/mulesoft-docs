@@ -1,4 +1,4 @@
-= Create a VPC Using Runtime Manager
+= Workflow: Creating a VPC Using Runtime Manager
 
 image:logo-cloud-active.png[link="/runtime-manager/deployment-strategies", title="CloudHub"]
 image:logo-hybrid-disabled.png[link="/runtime-manager/deployment-strategies", title="Hybrid Deployment"]
@@ -7,9 +7,9 @@ image:logo-pcf-disabled.png[link="/runtime-manager/deployment-strategies", title
 
 == Prerequisites
 
-To be able to create a VPC, your organization needs to purchase a link:https://www.mulesoft.com/platform/services/vpc-virtual-private-cloud[VPC offering] and your account needs to meet the link:/runtime-manager/virtual-private-cloud#vpc-management-permissions[necessary permissions] to create and administrate a VPC.
+To be able to create a VPC, your organization needs to purchase a link:https://www.mulesoft.com/platform/services/vpc-virtual-private-cloud[VPC offering] and your account needs to meet the link:/runtime-manager/virtual-private-cloud-permissions-about[necessary permissions] to create and administrate a VPC.
 
-This tutorial assumes that you are familiar with link:/runtime-manager/virtual-private-cloud[Virtual private Cloud terminology], and link:/runtime-manager/cloudhub-architecture[CloudHub architecture].
+This tutorial assumes that you are familiar with link:/runtime-manager/virtual-private-cloud-about[Virtual private Cloud terminology], and link:/runtime-manager/cloudhub-architecture[CloudHub architecture].
 
 == Overview
 
@@ -45,7 +45,7 @@ The CIDR Blocks chosen for the VPC should ideally come from a private IP space, 
 [CAUTION]
 --
 Once the VPC is created, it is not possible to resize it, nor to edit your selected CIDR block. +
-Understanding how to size your VPC is crucial at this point. If you are not sure how to configure this, make sure to follow our link:/runtime-manager/virtual-private-cloud#size-your-vpc[VPC sizing] guide.
+Understanding how to size your VPC is crucial at this point. If you are not sure how to configure this, make sure to follow our link:/runtime-manager/virtual-private-cloud-size-about[VPC sizing] guide.
 --
 +
 . Set an environment to which your VPC is bound. +
@@ -75,7 +75,7 @@ Optionally you can click the *Internal DNS* option.
 
 image:vpc-tutorial-31341.png[]
 
-This option allows you to link:/runtime-manager/virtual-private-cloud#set-up-internal-dns[set up internal DNS servers] to resolve your private host names.
+This option allows you to link:/runtime-manager/virtual-private-cloud-internal-dns-about[set up internal DNS servers] to resolve your private host names.
 
 .. Click the `Add New IP` button and type your public DNS IP address. +
 Click the `Add to List` or hit `enter`. +
@@ -94,14 +94,14 @@ Whenever those private domains are provided, your worker resolves them using you
 
 [NOTE]
 --
-Additionally, you can link:/runtime-manager/create-vpc-cli[create a VPC using the Anypoint Platform CLI].
+Additionally, you can link:/runtime-manager/vpc-create-using-cli-workflow[create a VPC using the Anypoint Platform CLI].
 --
 
 From this moment on, any application that is deployed to US-EAST (disregarding the environment used), will be deployed to this VPC. +
 
 === Connect to your VPC
 
-link:/runtime-manager/virtual-private-cloud#vpc-connectivity-methods[VPC connectivity methods] (IPSEC, AWS Peering, etc) are not a self-serve function at this time. +
+link:/runtime-manager/virtual-private-cloud-connectivity-methods-about[VPC connectivity methods] (IPSEC, AWS Peering, etc) are not a self-serve function at this time. +
 To configure a connection between your Cloudhub VPC and your infrastructure, download link:_attachments/VPC-Gateway-Questionnaire-v8.xlsm[the VPC discovery form] (requires at least MS Excel 2007 with macros enabled), enter data to communicate the necessary details required for your connectivity method and send it to Mulesoft customer support. 
 
 The SLA for configuring VPC is 5 business days after the VPC discovery form has been completed and returned, though it may be completed sooner.

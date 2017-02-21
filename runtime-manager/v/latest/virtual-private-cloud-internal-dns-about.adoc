@@ -1,0 +1,14 @@
+= About VPC Internal DNS
+
+If you choose to connect other networks to your VPC, you can use your custom private domain names by specifying your custom hostnames and the DNS server IP address through which resolve them.
+
+Any request that matches your specified private hostnames, will first be resolved using your provided DNS servers. +
+You can pass as many domains as you need, and up to 3 IP addresses.
+
+
+[NOTE]
+--
+This feature is supported by workers running Mule versions 3.5.x, 3.6.x, 3.7.4, 3.8.0, 3.8.1 and newer.
+--
+
+You can configure this feature using the link:/runtime-manager/anypoint-platform-cli#cloudhub-vpc-dns-servers-set[Anypoint Platform CLI's command], or through the link:/runtime-manager/vpc-create-using-runtime-manager-workflow#set-dns[VPC UI].

@@ -1,0 +1,51 @@
+= About Virtual Private Cloud
+
+
+image:logo-cloud-active.png[link="/runtime-manager/deployment-strategies", title="CloudHub"]
+image:logo-hybrid-disabled.png[link="/runtime-manager/deployment-strategies", title="Hybrid Deployment"]
+image:logo-server-disabled.png[link="/runtime-manager/deployment-strategies", title="Anypoint Platform On-Premises"]
+image:logo-pcf-disabled.png[link="/runtime-manager/deployment-strategies", title="Pivotal Cloud Foundry"]
+
+The Virtual Private Cloud (VPC) offering allows you to virtually create a private and isolated network in the cloud to host your link:/runtime-manager/cloudhub-architecture#cloudhub-workers[CloudHub workers]. +
+You can choose to use this isolated network as it best suites your needs:
+
+* Host your applications in a VPC and take advantage of its link:/runtime-manager/cloudhub-dedicated-load-balancer[dedicated load balancer features]
+* Configure your own firewall rules to apply to your workers.
+* Connect your VPC to your corporate intranet – whether on-premises or in other clouds – via a VPN connection as if they were all part of a single, private network.
+* Set your private DNS server so the workers hosted in your VPC communicate with your internal network using your private hostnames.
+
+== How VPC Works
+
+As opposed to the default configuration, where all CloudHub workers reside in a link:/runtime-manager/cloudhub-architecture#global-worker-clouds[multi-tenant public cloud], balanced by a link:/runtime-manager/cloudhub-networking-guide#load-balancing[publicly accessible load balancer], the Virtual Private Cloud grants you a logically private and isolated network dedicated to host your CloudHub worker instances, and set a dedicated load balancer to distribute requests between your workers.
+
+Using the VPC firewall rules, you can expose or block custom ports and IP addresses from your VPC.
+Each VPC can host one or more link:/runtime-manager/cloudhub-dedicated-load-balancer[dedicated load balancers]. Each dedicated load balancer has a _DNS A record_ that you can add to your own DNS CNAME record to handle requests to your own domain. +
+
+Alternatively, you can connect this network to any other network via a secure VPN connection. This allows CloudHub workers to access resources behind your corporate firewall. +
+You can leverage an *IPSec* gateway or *Amazon Web Services (AWS) _Direct Connect_* for VPN connectivity. +
+
+== Frequently Asked Questions about CloudHub VPC
+
+*Can I reuse my existing Amazon VPC?*
+
+No, but we can set up your CloudHub VPC to communicate with your existing Amazon VPC.
+
+*How does VPC work with Amazon regions?*
+
+Our VPC solution supports different Amazon regions. During setup, you need to specify which Amazon region you want. If you need support for multiple regions, please submit one copy of the discovery form for each region in which you need support. 
+
+*Can I have multiple VPCs?*
+
+Yes, customers can purchase as many VPCs as required, with a minimum purchase of two.  For more information on VPC pricing, contact your MuleSoft Account Executive.
+
+*Can I have multiple VPCs in a single Amazon region?*
+
+Yes, this is possible, but not included in our standard setup. Contact your account representative to discuss your requirements.
+
+*How do I communicate with my workers through my VPC without going over the public Internet?*
+
+You can communicate with your Mule worker by using mule-worker-internal-myapp.cloudhub.io as the address in your configuration. This is a DNS A record which includes the IP addresses of all your workers.
+
+== See Also
+
+link:/runtime-manager/virtual-private-cloud-setting-up-about[About Setting Up a VPC]
