@@ -228,7 +228,7 @@ Additionally, if your application is deployed to the cloud, you can link:/runtim
 * link:/runtime-manager/managing-queues[Queues]
 * link:/runtime-manager/managing-schedules[Schedules]
 * link:/runtime-manager/secure-application-properties[Secure Application Properties]
-* link:/runtime-manager/virtual-private-cloud[Virtual Private Cloud]
+* link:/runtime-manager/virtual-private-cloud-about[Virtual Private Cloud]
 
 
 [TIP]

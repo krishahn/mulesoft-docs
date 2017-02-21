@@ -147,7 +147,7 @@ There are some specific scenarios where your static IP may be removed or reassig
 
 * Deleting an application also removes its Static IP. If you create a new application with the same name, it has a new dynamically assigned IP address.
 * Adding a new application by moving it from Sandbox to Production. This requires a new application name, hence a new Static IP
-* If a link:/runtime-manager/virtual-private-cloud[Virtual Private Cloud (VPC)] is built for your organization, any existing application that is not already in the VPC receives a new IP address when it restarts inside the VPC.
+* If a link:/runtime-manager/virtual-private-cloud-about[Virtual Private Cloud (VPC)] is built for your organization, any existing application that is not already in the VPC receives a new IP address when it restarts inside the VPC.
 * An application is re-deployed to a different geographic region. You can pre-allocate a static IP in the new region in the *Static IPs* tab in the application settings page.
 * An application is deployed to multiple Cloudhub workers (such as link:/runtime-manager/cloudhub-fabric[Fabric]). Fabric deployments do not support Static IPs. 
 
@@ -157,7 +157,7 @@ No. Cloudhub utilizes a pool of Static IP’s, which are only assigned to a Clou
 
 === I am running in a Cloudhub Virtual Private Network, how do I assign a Static IP to my internal private IP?
 
-Cloudhub is able to set the worker's public IP address to Static. However, the internal private IP address always remains Dynamic. The private IP address is assigned from the range specified in the Cloudhub Worker's Address Space, which was determined at the creation of your link:/runtime-manager/virtual-private-cloud[VPC].
+Cloudhub is able to set the worker's public IP address to Static. However, the internal private IP address always remains Dynamic. The private IP address is assigned from the range specified in the Cloudhub Worker's Address Space, which was determined at the creation of your link:/runtime-manager/virtual-private-cloud-about[VPC].
 
 === What are the possible IP ranges that can be assigned to Static IPs?
 
@@ -200,5 +200,5 @@ The CloudHub platform is monitored 24x7 by automated systems. In the event of an
 * link:/runtime-manager/managing-application-data-with-object-stores[Managing Application Data with Object Stores]
 * link:/runtime-manager/anypoint-platform-cli[Command Line Tools]
 * link:/runtime-manager/secure-application-properties[Secure Application Properties]
-* link:/runtime-manager/virtual-private-cloud[Virtual Private Cloud]
+* link:/runtime-manager/virtual-private-cloud-about[Virtual Private Cloud]
 * link:/runtime-manager/penetration-testing-policies[Penetration Testing Policies]

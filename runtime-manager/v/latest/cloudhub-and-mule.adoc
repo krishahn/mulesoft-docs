@@ -164,5 +164,5 @@ There are also a few components which CloudHub has limited support for currently
 * link:/runtime-manager/managing-application-data-with-object-stores[Managing Application Data with Object Stores]
 * link:/runtime-manager/anypoint-platform-cli[Command Line Tools]
 * link:/runtime-manager/secure-application-properties[Secure Application Properties]
-* link:/runtime-manager/virtual-private-cloud[Virtual Private Cloud]
+* link:/runtime-manager/virtual-private-cloud-about[Virtual Private Cloud]
 * link:/runtime-manager/penetration-testing-policies[Penetration Testing Policies]

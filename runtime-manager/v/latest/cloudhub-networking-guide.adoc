@@ -56,12 +56,12 @@ The following DNS records are exposed for your applications when deployed to Clo
 |===
 |*myapp.cloudhub.io* |Load balancer. Ports 80 and 443 forward to  `${http.port}` and `${https.port}` respectively.
 |*mule-worker-myapp.cloudhub.io* |The external IP address of the Mule workers. HTTP services are exposed on: `${http.port}` and `${https.port}`
-|*mule-worker-internal-myapp.cloudhub.io* |The internal IP address of the Mule workers. The IPs for this DNS record are only accessible within a customer's private link:/runtime-manager/virtual-private-cloud[VPC]. *These IPs are not accessible for workers running in the MuleSoft shared VPC.* Public HTTP services are exposed on `${http.port}` and `${https.port}.` Internal HTTP services are exposed on ports *8091/8092*.
+|*mule-worker-internal-myapp.cloudhub.io* |The internal IP address of the Mule workers. The IPs for this DNS record are only accessible within a customer's private link:/runtime-manager/virtual-private-cloud-about[VPC]. *These IPs are not accessible for workers running in the MuleSoft shared VPC.* Public HTTP services are exposed on `${http.port}` and `${https.port}.` Internal HTTP services are exposed on ports *8091/8092*.
 |===
 
 In certain situations, you may want to know an application’s internal IPs:
 
-* When communicating with the worker directly within the customer's link:/runtime-manager/virtual-private-cloud[VPC] without sending data over the public internet
+* When communicating with the worker directly within the customer's link:/runtime-manager/virtual-private-cloud-about[VPC] without sending data over the public internet
 * When you wish to setup your own load balancer (see below)
 
 These IP addresses can be accessed through the `mule-worker-internal-myapp.cloudhub.io` record, from within the customer's VPC. If you access the workers directly, any load distribution benefits from the CloudHub load balancing layer are lost.
@@ -107,7 +107,7 @@ The only two ports exposed externally are `${http.port}` and `${https.port}` (by
 
 If you wish to expose HTTP services only inside a VPC, these services can be exposed on ports `${http.private.port'}` `${https.private.port'}` (`8091` and `8092` respectively), which are open by default on the internal network. In this case, these services are not accessible on the public IPs or the load-balancer, ensuring that they can be accessed securely.
 
-Additional ports can be opened inside the VPC, for example, for JMX based monitoring. In order  to do so, refer to the Firewall rules section in out link:/runtime-manager/virtual-private-cloud#firewall-rules[VPC documentation].
+Additional ports can be opened inside the VPC, for example, for JMX based monitoring. In order  to do so, refer to the Firewall rules section in out link:/runtime-manager/virtual-private-cloud-firewall-rules-about[VPC documentation].
 
 == Dedicated Load Balancing Configurations
 
@@ -117,13 +117,13 @@ Traffic can be routed from your load balancer to CloudHub workers through the in
 
 // Zero downtime deploys are not fully supported in this situation. If you set your DNS timeout low enough, you should not notice any interruptions in services while updating workers. However, since CloudHub is not aware of your load balancer setup, it cannot check to see if the DNS record has been updated and if requests are being propagated correctly. This means there is a small window where it is theoretically possible for service to be interrupted.
 
-By configuring your own link:/runtime-manager/virtual-private-cloud[VPC] you can set your own link:/runtime-manager/cloudhub-dedicated-load-balancer[dedicated load balancer] through the link:/runtime-manager/anypoint-platform-cli[Anypoint Platform Command Line Interface].
+By configuring your own link:/runtime-manager/virtual-private-cloud-about[VPC] you can set your own link:/runtime-manager/cloudhub-dedicated-load-balancer[dedicated load balancer] through the link:/runtime-manager/anypoint-platform-cli[Anypoint Platform Command Line Interface].
 
 == Avoiding Public Discoverability for Applications on CloudHub
 
-If you have a link:/runtime-manager/virtual-private-cloud[Virtual Private Cloud] and a link:/runtime-manager/cloudhub-dedicated-load-balancer[Cloudhub Dedicated Load Balancer for VPCs], you can prevent your applications hosted in CloudHub from being publicly accessible:
+If you have a link:/runtime-manager/virtual-private-cloud-about[Virtual Private Cloud] and a link:/runtime-manager/cloudhub-dedicated-load-balancer[Cloudhub Dedicated Load Balancer for VPCs], you can prevent your applications hosted in CloudHub from being publicly accessible:
 
-. Remove the link:/runtime-manager/virtual-private-cloud#firewall-rules[VPC firewall rule] for ports 8081 and 8082 using:
+. Remove the link:/runtime-manager/virtual-private-cloud-firewall-rules-about[VPC firewall rule] for ports 8081 and 8082 using:
 .. The *Firwall Rules* tab in your VPC management center:
 ... Remove both rules with *source* `Anywhere (0.0.0.0/0)` and ports 8081 and 8082.
 .. The Anypoint CLI
@@ -134,4 +134,4 @@ If you have a link:/runtime-manager/virtual-private-cloud[Virtual Private Cloud]
 == See Also
 
 * link:/runtime-manager/cloudhub-architecture[CloudHub architecture]
-* link:/runtime-manager/virtual-private-cloud[Virtual Private Cloud]
+* link:/runtime-manager/virtual-private-cloud-about[Virtual Private Cloud]

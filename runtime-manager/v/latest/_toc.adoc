@@ -3,8 +3,8 @@
 * link:/runtime-manager/[Runtime Manager]
 ** link:/runtime-manager/tutorials[Tutorials]
 *** link:/runtime-manager/building-an-https-service[Building an HTTPS Service]
-*** link:/runtime-manager/vpc-tutorial[Create a VPC using Runtime Manager]
-*** link:/runtime-manager/create-vpc-cli[Create a VPC using Anypoint Platform CLI]
+*** link:/runtime-manager/vpc-create-using-runtime-manager-workflow[Workflow: Creating a VPC Using Runtime Manager]
+*** link:/runtime-manager/vpc-create-using-cli-workflow[Workflow: Creating a VPC Using Anypoint Platform CLI]
 *** link:/runtime-manager/dedicated-load-balancer-tutorial[Create a Dedicated Load Balancer]
 ** link:/runtime-manager/deployment-strategies[Deployment Strategies]
 *** link:/runtime-manager/deploying-to-cloudhub[Deploying to CloudHub]
@@ -16,7 +16,15 @@
 **** link:/runtime-manager/managing-schedules[Managing Schedules]
 **** link:/runtime-manager/secure-application-properties[Secure Application Properties]
 **** link:/runtime-manager/managing-application-data-with-object-stores[Managing App Data using Object Stores]
-**** link:/runtime-manager/virtual-private-cloud[Virtual Private Cloud]
+**** link:/runtime-manager/virtual-private-cloud-about[About Virtual Private Cloud]
+**** link:/runtime-manager/virtual-private-cloud-setting-up-about[About Setting Up a VPC]
+**** link:/runtime-manager/virtual-private-cloud-size-about[About VPC Sizing]
+**** link:/runtime-manager/virtual-private-cloud-permissions-about[About VPC Permissions]
+**** link:/runtime-manager/virtual-private-cloud-deployment-about[About VPC Deployment]
+**** link:/runtime-manager/virtual-private-cloud-firewall-rules-about[About VPC Firewall Rules]
+**** link:/runtime-manager/virtual-private-cloud-internal-dns-about[About VPC Internal DNS Server]
+**** link:/runtime-manager/virtual-private-cloud-connectivity-methods-about[About VPC Connectivity Methods]
+
 **** link:/runtime-manager/custom-application-alerts[Custom Application Alerts]
 +
 ////

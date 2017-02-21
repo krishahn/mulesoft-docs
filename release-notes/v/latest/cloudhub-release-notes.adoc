@@ -317,7 +317,7 @@ Read our FAQ about API Manager and CloudHub unification
 
 * Performance improvements for the link:/runtime-manager/managing-application-data-with-object-stores[CloudHub ObjectStore]
 * Increased limits of ObjectStore to 100K keys and 1 GB of data per application
-* Support for a link:/runtime-manager/virtual-private-cloud[VPC] per CloudHub environment
+* Support for a link:/runtime-manager/virtual-private-cloud-about[VPC] per CloudHub environment
 
 == R37 - March 8, 2014
 
@@ -330,7 +330,7 @@ Read our FAQ about API Manager and CloudHub unification
 
 == R35 - December 8, 2013
 
-* Enterprise link:/runtime-manager/virtual-private-cloud[Virtual Private Cloud] for high-throughput use cases.
+* Enterprise link:/runtime-manager/virtual-private-cloud-about[Virtual Private Cloud] for high-throughput use cases.
 * link:/runtime-manager/managing-schedules[Schedule management] now generally available to all accounts, including support for Cron expressions.
 * Support for link:/mule-user-guide/v/3.7/batch-processing[batch processing].
 

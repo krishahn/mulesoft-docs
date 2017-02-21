@@ -59,7 +59,7 @@ Each default Role in Anypoint Platform holds pre-defined permissions with a _sco
 * Set Custom Policies
 * Manage access of third party applications to an API
 * Edit users email address
-* Grant link:/runtime-manager/virtual-private-cloud[VPC] and link:/runtime-manager/cloudhub-dedicated-load-balancer[CloudHub dedicated Load Balancer] permissions
+* Grant link:/runtime-manager/virtual-private-cloud-about[VPC] and link:/runtime-manager/cloudhub-dedicated-load-balancer[CloudHub dedicated Load Balancer] permissions
 | API Creators | * Create/Import an API Version
 | API Versions Owner |
 * Manage any API Version in the organization
